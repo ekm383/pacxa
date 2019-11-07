@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `A Different Kind Of IT Solution`,
+    description: `Effective technology begins with people. As such, we speak English as well as IT. Our roots are here in the islands, giving us the know-how to work in Hawaii. And with the technical chops to handle everything from emerging businesses to government entities, we help propel your organization forward—toward greater efficiency, manageability and profitability.`,
+    author: `@superscriptcreative`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -15,6 +15,8 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-transition-link`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
