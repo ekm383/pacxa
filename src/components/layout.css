@@ -63,3 +63,10 @@ h6 {
   align-items: center;
   justify-content: center;
 }
+
+.hero {
+  min-height: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

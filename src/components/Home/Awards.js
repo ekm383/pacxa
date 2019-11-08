@@ -5,7 +5,7 @@ import Accolades from "../Accolades"
 import { IoIosRibbon } from "react-icons/io"
 import pic01 from "../../images/pacxa-shake.jpg"
 
-const Awards = ({ data }) => {
+const Awards = () => {
   return (
     <AwardsWrapper>
       <div className="awardsContainer">

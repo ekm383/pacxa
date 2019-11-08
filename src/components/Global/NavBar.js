@@ -25,21 +25,11 @@ export default class NavBar extends Component {
       },
       {
         id: 4,
-        path: "/team",
-        text: "team",
-      },
-      {
-        id: 5,
-        path: "/jobs",
-        text: "jobs",
-      },
-      {
-        id: 6,
         path: "/contact",
         text: "contact us",
       },
       {
-        id: 7,
+        id: 5,
         path: " ",
         text: "search",
       },
