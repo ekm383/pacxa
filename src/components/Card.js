@@ -16,6 +16,7 @@ const Card = ({ icon, title, description, link, linkText }) => {
 }
 
 const CardWrapper = styled.div`
+  width: 47%;
   border-radius: 2px;
   box-shadow: 0px 0px 10px #f1f1f1;
   padding: 1rem;

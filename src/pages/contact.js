@@ -1,6 +1,8 @@
 import React from "react"
 import Layout from "../components/layout"
 import Hero from "../components/Global/Hero"
+import { graphql } from "gatsby"
+import ContactForm from "../components/ContactForm"
 
 const contact = ({ data }) => {
   return (
@@ -10,6 +12,7 @@ const contact = ({ data }) => {
         styleClass="hero"
         title="Contact Us"
       />
+      <ContactForm />
     </Layout>
   )
 }
