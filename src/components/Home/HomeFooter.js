@@ -12,6 +12,7 @@ const HomeFooter = () => {
           title="Get Started"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
         />
+        <br />
         <AniLink fade className="button-dark" to="/contact">
           Get Started
         </AniLink>
@@ -23,10 +24,10 @@ const HomeFooter = () => {
 const HomeFooterWrapper = styled.div`
   display: flex;
   justify-content: center;
-  background-color: var(--secondaryColor);
+  background: linear-gradient(45deg, #21235d, #5dc4b8);
   padding: 4rem 0rem;
   .homeFooterContainer {
-    width: 25%;
+    width: 45%;
     margin: 0rem auto;
     text-align: center;
     color: var(--mainWhite);
@@ -47,6 +48,11 @@ const HomeFooterWrapper = styled.div`
       background: none;
       color: var(--mainWhite);
       border-color: var(--mainWhite);
+    }
+  }
+  @media (max-width: 666px) {
+    .homeFooterContainer {
+      width: 80%;
     }
   }
 `

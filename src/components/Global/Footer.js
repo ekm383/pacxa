@@ -121,14 +121,14 @@ const FooterWrapper = styled.div`
     padding-left: 0rem;
   }
   .footer ul li {
-    font-size: 0.4rem;
+    font-size: 0.5rem;
     margin: 1rem 0rem;
   }
   .footer ul li a {
     color: var(--mainGray);
   }
   .footer h4 {
-    font-size: 0.4rem;
+    font-size: 0.7rem;
     font-weight: bold;
   }
   .snippet {

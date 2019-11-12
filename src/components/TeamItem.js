@@ -22,11 +22,11 @@ const PersonWrapper = styled.div`
   }
   .name {
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     margin: 1rem auto;
   }
   .bio {
-    font-size: 0.7rem;
+    font-size: 1rem;
     text-align: left;
   }
 `

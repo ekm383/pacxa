@@ -7,7 +7,7 @@ const Support = () => {
   return (
     <SupportWrapper>
       <h2>Support</h2>
-      <div className="supportContainer">
+      <div className="support">
         <div>
           <h6>{<FaHeadset />} Phone Number:</h6>
           <p>(808) 791-5921</p>
@@ -48,7 +48,7 @@ const SupportWrapper = styled.div`
   p {
     font-size: 0.8rem;
   }
-  .supportContainer {
+  .support {
     display: flex;
     justify-content: center;
     div {
@@ -59,7 +59,7 @@ const SupportWrapper = styled.div`
     margin-top: 2rem;
   }
   .button-light {
-    font-size: 0.7rem;
+    font-size: 1rem;
     color: var(--primaryColor);
     background-color: var(--mainWhite);
     padding: 0.8rem 1.2rem;

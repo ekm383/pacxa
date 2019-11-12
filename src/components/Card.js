@@ -17,14 +17,11 @@ const Card = ({ icon, title, description, link, linkText }) => {
 
 const CardWrapper = styled.div`
   width: 47%;
-  border-radius: 2px;
-  box-shadow: 0px 0px 10px #f1f1f1;
   padding: 1rem;
-  margin: 0.5rem;
   .icon {
     width: 2rem;
     height: 2rem;
-    background: linear-gradient(#21235d, #5dc4b8);
+    background: linear-gradient(45deg, #21235d, #5dc4b8);
     text-align: center;
     border-radius: 1rem;
     margin-bottom: 1rem;
@@ -36,7 +33,7 @@ const CardWrapper = styled.div`
     margin-top: 0.25rem;
   }
   .title {
-    font-size: 0.7rem;
+    font-size: 1rem;
     font-weight: bold;
     color: var(--primaryColor);
   }
@@ -47,8 +44,16 @@ const CardWrapper = styled.div`
     line-height: 1rem;
   }
   .linkText {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color: var(--primaryColor);
+  }
+  @media (max-width: 973px) {
+    padding: 0rem;
+    margin: 2rem auto;
+  }
+  @media (max-width: 666px) {
+    width: 100%;
+    margin: 2rem auto;
   }
 `
 

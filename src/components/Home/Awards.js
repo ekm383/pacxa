@@ -76,6 +76,15 @@ const AwardsWrapper = styled.div`
       height: 100%;
     }
   }
+  @media (max-width: 973px) {
+    .awardsContainer {
+      flex-direction: column;
+    }
+    .introContainer,
+    .imageContainer {
+      width: 100%;
+    }
+  }
 `
 
 export default Awards

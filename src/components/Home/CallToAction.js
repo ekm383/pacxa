@@ -10,7 +10,7 @@ const HeroFeature = () => {
         Contact us to learn more about our services and how <br /> we can best
         meet your business needs.
       </p>
-      <div>
+      <div className="buttonContainer">
         <AniLink fade className="button-dark" to="/contact">
           Request A Demo
         </AniLink>
@@ -29,12 +29,15 @@ const HeroWrapper = styled.div`
     font-weight: 600;
   }
   p {
-    font-size: 0.7rem;
+    font-size: 1rem;
     font-weight: lighter;
-    line-height: 1.2rem;
+    line-height: 1.5rem;
   }
   div {
     display: flex;
+  }
+  .buttonContainer {
+    margin-top: 2rem;
   }
   .button-light {
     font-size: 0.7rem;

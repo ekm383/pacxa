@@ -33,7 +33,7 @@ const SolutionWrapper = styled.div`
     width: 25%;
   }
   p {
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
 `
 

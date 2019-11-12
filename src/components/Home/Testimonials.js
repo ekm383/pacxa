@@ -47,7 +47,7 @@ const Testimonials = () => {
 const TestimonialsWrapper = styled.div`
   width: 100%;
   margin: 4rem auto;
-  background-color: var(--secondaryColor);
+  background: linear-gradient(45deg, #21235d, #5dc4b8);
   color: var(--mainWhite);
   .testimonialContainer {
     display: flex;
@@ -66,6 +66,20 @@ const TestimonialsWrapper = styled.div`
     width: 70%;
     display: flex;
     flex-direction: row;
+  }
+  @media (max-width: 973px) {
+    .testimonialContainer {
+      flex-wrap: wrap;
+    }
+    .introContainer,
+    .cardContainer {
+      width: 100%;
+    }
+  }
+  @media (max-width: 666px) {
+    .cardContainer {
+      flex-direction: column;
+    }
   }
 `
 

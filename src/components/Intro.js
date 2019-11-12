@@ -13,7 +13,7 @@ const Intro = ({ subtitle, title, description }) => {
 
 const IntroWrapper = styled.div`
   .subtitle {
-    font-size: 0.4rem;
+    font-size: 0.7rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
   }

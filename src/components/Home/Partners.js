@@ -35,6 +35,18 @@ const PartnersWrapper = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
   }
+  @media (max-width: 973px) {
+    flex-direction: column;
+    .introContainer,
+    .logoContainer {
+      width: 100%;
+    }
+  }
+  @media (max-width: 666px) {
+    .introContainer {
+      padding: 0rem;
+    }
+  }
 `
 
 export default Partners

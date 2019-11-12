@@ -14,6 +14,7 @@ const Solutions = () => {
           title="Our Solutions"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
         />
+        <br />
         <AniLink fade className="button-dark" to="/contact">
           Request A Demo
         </AniLink>
@@ -67,6 +68,7 @@ const SolutionsWrapper = styled.div`
     flex-wrap: wrap;
   }
   .button-dark {
+    margin-top: 1rem;
     margin-right: 0.5rem;
     font-size: 0.7rem;
     color: var(--mainWhite);
@@ -80,6 +82,16 @@ const SolutionsWrapper = styled.div`
       background: none;
       color: var(--primaryColor);
       border-color: var(--primaryColor);
+    }
+  }
+  @media (max-width: 973px) {
+    flex-wrap: wrap;
+    .introContainer,
+    .cardContainer {
+      width: 100%;
+    }
+    .cardContainer {
+      margin-top: 2rem;
     }
   }
 `

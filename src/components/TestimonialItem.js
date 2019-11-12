@@ -20,6 +20,8 @@ const TestimonialItem = ({ icon, description, photo, name, title }) => {
 }
 
 const ItemWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0.4);
   margin: 0.2rem;
@@ -30,7 +32,7 @@ const ItemWrapper = styled.div`
     color: var(--mainWhite);
   }
   .description {
-    font-size: 0.4rem;
+    font-size: 0.7rem;
     line-height: 1.2rem;
     text-align: left;
     padding: 0.45rem;
@@ -52,6 +54,9 @@ const ItemWrapper = styled.div`
   }
   .name {
     font-weight: bold;
+  }
+  @media (max-width: 666px) {
+    width: 100%;
   }
 `
 

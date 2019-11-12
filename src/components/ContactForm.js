@@ -89,7 +89,7 @@ const FormWrapper = styled.div`
   }
   .supportContainer {
     display: flex;
-    background-color: var(--primaryColor);
+    background: linear-gradient(45deg, #21235d, #5dc4b8);
     padding: 1rem 4rem;
   }
   .formContainer {
@@ -102,7 +102,7 @@ const FormWrapper = styled.div`
     }
   }
   .button-dark {
-    font-size: 0.7rem;
+    font-size: 1rem;
     color: var(--mainWhite);
     background-color: var(--primaryColor);
     padding: 0.8rem 1.2rem;

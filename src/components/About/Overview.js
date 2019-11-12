@@ -35,7 +35,7 @@ const OverviewWraper = styled.div`
   margin: 4rem auto 1rem auto;
   display: flex;
   p {
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
 `
 
