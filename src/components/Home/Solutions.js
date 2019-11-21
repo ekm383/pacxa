@@ -14,7 +14,6 @@ const Solutions = () => {
           title="Our Solutions"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
         />
-        <br />
         <AniLink fade className="button-dark" to="/contact">
           Request A Demo
         </AniLink>
@@ -92,6 +91,12 @@ const SolutionsWrapper = styled.div`
     }
     .cardContainer {
       margin-top: 2rem;
+    }
+  }
+  @media (max-width: 666px) {
+    text-align: center;
+    .introContainer {
+      margin-right: 0rem;
     }
   }
 `

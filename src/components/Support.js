@@ -59,18 +59,24 @@ const SupportWrapper = styled.div`
     margin-top: 2rem;
   }
   .button-light {
-    font-size: 1rem;
-    color: var(--primaryColor);
-    background-color: var(--mainWhite);
+    font-size: 0.7rem;
+    color: var(--mainWhite);
+    background-color: var(--primaryColor);
     padding: 0.8rem 1.2rem;
     border-radius: 1px;
-    border: 1px solid var(--mainWhite);
+    border: 1px solid var(--primaryColor);
     transition: ease 0.3s;
     &:hover {
       text-decoration: none;
       background: none;
-      color: var(--mainWhite);
+      color: var(--primaryColor);
       border-color: (--mainWhite);
+    }
+  }
+  @media (max-width: 666px) {
+    width: 80vw;
+    .support {
+      flex-direction: column;
     }
   }
 `

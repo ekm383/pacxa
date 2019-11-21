@@ -26,8 +26,14 @@ const PersonWrapper = styled.div`
     margin: 1rem auto;
   }
   .bio {
-    font-size: 1rem;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    padding: 0.5rem;
     text-align: left;
+  }
+  @media (max-width: 973px) {
+    width: 100%;
+    margin: 1rem auto;
   }
 `
 

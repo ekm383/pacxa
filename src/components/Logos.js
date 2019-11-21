@@ -30,9 +30,21 @@ const LogoWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  margin: 2rem 0rem;
   img {
     width: 100px;
     margin: 0.5rem;
+  }
+  @media (max-width: 973px) {
+    .topLogos {
+      margin: 1rem;
+    }
+  }
+  @media (max-width: 666px) {
+    .topLogos {
+      margin: 1rem 1rem;
+      align-items: center;
+    }
   }
 `
 

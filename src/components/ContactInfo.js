@@ -9,10 +9,6 @@ export const ContactInfo = () => {
         <p>(808) 585-0444</p>
       </div>
       <div>
-        <h6>Fax Number:</h6>
-        <p>(808) 537-9300</p>
-      </div>
-      <div>
         <h6>Office Address:</h6>
         <p>
           1000 Bishop Street, Suite 701,
@@ -39,7 +35,8 @@ export const ContactInfo = () => {
 const InfoWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   width: 80vw;
   text-align: center;
   margin: 0rem auto;
@@ -48,6 +45,9 @@ const InfoWrapper = styled.div`
   }
   p {
     font-size: 0.7rem;
+  }
+  @media (max-width: 666px) {
+    flex-direction: column;
   }
 `
 

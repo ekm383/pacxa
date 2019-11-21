@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import logo from "../../images/pacxa-logo.png"
-import { FaSearch } from "react-icons/fa"
 
 export default class NavBar extends Component {
   state = {
@@ -27,11 +26,6 @@ export default class NavBar extends Component {
         id: 4,
         path: "/contact",
         text: "contact us",
-      },
-      {
-        id: 5,
-        path: " ",
-        text: "search",
       },
     ],
   }
@@ -65,11 +59,19 @@ export default class NavBar extends Component {
           <ul className="navbar-nav ml-auto">
             {this.state.links.map(link => {
               return (
-                <li key={link.id} id={link.text} className="nav-item ml-sm-2">
+                <li
+                  key={link.id}
+                  id={link.text}
+                  className="nav-item ml-sm-2 nav-link text-uppercase navlink"
+                >
                   <AniLink
                     fade
                     to={link.path}
-                    className="nav-link text-uppercase navlink"
+                    activeStyle={
+                      link.text === "contact us"
+                        ? {}
+                        : { textDecoration: "underline" }
+                    }
                   >
                     {link.text}
                   </AniLink>
@@ -77,9 +79,6 @@ export default class NavBar extends Component {
               )
             })}
           </ul>
-          <a href="https://www.facebook.com" className="icon">
-            <FaSearch />
-          </a>
         </div>
       </nav>
     )

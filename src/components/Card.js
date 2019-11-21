@@ -41,7 +41,7 @@ const CardWrapper = styled.div`
     font-size: 0.7rem;
     font-weight: light;
     color: var(--mainGray);
-    line-height: 1rem;
+    line-height: 1.2rem;
   }
   .linkText {
     font-size: 0.8rem;
@@ -54,6 +54,10 @@ const CardWrapper = styled.div`
   @media (max-width: 666px) {
     width: 100%;
     margin: 2rem auto;
+    text-align: center;
+    .icon {
+      margin: 0rem auto 1rem auto;
+    }
   }
 `
 

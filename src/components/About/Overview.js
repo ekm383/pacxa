@@ -34,8 +34,13 @@ const OverviewWraper = styled.div`
   width: 80vw;
   margin: 4rem auto 1rem auto;
   display: flex;
+  h4 {
+    font-size: 2rem;
+    font-weight: lighter;
+  }
   p {
-    font-size: 1rem;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
   }
 `
 

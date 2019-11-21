@@ -1,81 +1,171 @@
 import React from "react"
-// import { Formik, Form, Field, ErrorMessage } from "formik"
+import { Formik } from "formik"
+import * as Yup from "yup"
 import styled from "styled-components"
 import Support from "../components/Support"
 import ContactInfo from "../components/ContactInfo"
+import Error from "../components/Error"
+
+const validationSchema = Yup.object().shape({
+  name: Yup.string()
+    .min(1, "Must have a character")
+    .max(255, "Must be shorter than 255")
+    .required("Please enter your name."),
+  company: Yup.string()
+    .min(1, "Must have a character")
+    .max(255, "Must be shorter than 255"),
+  email: Yup.string()
+    .email("Must be a valid email addres")
+    .max(255, "Must be shorter than 255")
+    .required("Please enter a valid email."),
+})
 
 const ContactForm = () => {
   return (
-    <FormWrapper>
-      <div className="formContainer">
-        <div>
-          <ContactInfo />
-        </div>
-        <form>
-          <fieldset>
-            <h2>How can we help you?</h2>
-            <div className="halfLabelContainer">
-              <label className="halflabel">
-                Full Name
-                <input type="text" />
-              </label>
-              <label className="halflabel">
-                Company
-                <input type="text" />
-              </label>
-            </div>
-            <div className="halfLabelContainer">
-              <label className="halflabel">
-                Email Address
-                <input type="email" />
-              </label>
-              <label className="halflabel">
-                Phone Number
-                <input type="tel" />
-              </label>
-            </div>
+    <Formik
+      initialValues={{
+        name: "",
+        company: "",
+        email: "",
+        phone: "",
+        message: "",
+      }}
+      validationSchema={validationSchema}
+      onSubmit={(values, { setSubmitting, resetForm }) => {
+        //
+        // TO DO: Handle Form Submission
+        //
+        setSubmitting(true)
+      }}
+    >
+      {({
+        values,
+        errors,
+        touched,
+        handleChange,
+        handleBlur,
+        handleSubmit,
+        isSubmitting,
+      }) => (
+        <FormWrapper>
+          <div className="formContainer">
             <div>
-              <label className="fulllabel">
-                Message
-                <textarea cols="30" rows="5"></textarea>
-              </label>
+              <ContactInfo />
             </div>
-            <div>
-              <label>How did you hear about us?</label>
-              <br />
-              <label className="checkLabel">
-                <input type="checkbox" name="awareness" value="Referral" />
-                Referral
-              </label>
-              <label className="checkLabel">
-                <input type="checkbox" name="awareness" value="Web Search" />
-                Web Search
-              </label>
-              <label className="checkLabel">
-                <input type="checkbox" name="awareness" value="Web Ad" />
-                Web Ad
-              </label>
-              <label className="checkLabel">
-                <input type="checkbox" name="awareness" value="Print Ad" />
-                Print Ad
-              </label>
-              <label className="checkLabel">
-                <input type="checkbox" name="awareness" value="Other" />
-                Other
-              </label>
-            </div>
-            <div>
-              <button className="button-dark" type="submit">
-                Send Message
-              </button>
-            </div>
-          </fieldset>
-        </form>
-      </div>
-      <div className="supportContainer">
-        <Support />
-      </div>
-    </FormWrapper>
+            <form onSubmit={handleSubmit}>
+              <fieldset>
+                <h2>How can we help you?</h2>
+                <div className="halfLabelContainer">
+                  <label className="halflabel">
+                    Full Name <small>*</small>
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      value={values.name}
+                      className={
+                        touched.name && errors.name ? "has-error" : null
+                      }
+                    />
+                    <Error touched={touched.name} message={errors.name} />
+                  </label>
+                  <label className="halflabel">
+                    Company
+                    <input
+                      type="text"
+                      name="company"
+                      id="company"
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      value={values.company}
+                      className={
+                        touched.company && errors.company ? "has-error" : null
+                      }
+                    />
+                  </label>
+                </div>
+                <div className="halfLabelContainer">
+                  <label className="halflabel">
+                    Email Address <small>*</small>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      value={values.email}
+                      className={
+                        touched.email && errors.email ? "has-error" : null
+                      }
+                    />
+                    <Error touched={touched.email} message={errors.email} />
+                  </label>
+                  <label className="halflabel">
+                    Phone Number
+                    <input
+                      type="tel"
+                      name="telephone"
+                      id="telephone"
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      value={values.phone}
+                    />
+                  </label>
+                </div>
+                <div>
+                  <label className="fulllabel">
+                    Message
+                    <textarea cols="30" rows="5"></textarea>
+                  </label>
+                </div>
+                <div>
+                  <label>How did you hear about us?</label>
+                  <br />
+                  <label className="checkLabel">
+                    <input type="checkbox" name="awareness" value="Referral" />
+                    Referral
+                  </label>
+                  <label className="checkLabel">
+                    <input
+                      type="checkbox"
+                      name="awareness"
+                      value="Web Search"
+                    />
+                    Web Search
+                  </label>
+                  <label className="checkLabel">
+                    <input type="checkbox" name="awareness" value="Web Ad" />
+                    Web Ad
+                  </label>
+                  <label className="checkLabel">
+                    <input type="checkbox" name="awareness" value="Print Ad" />
+                    Print Ad
+                  </label>
+                  <label className="checkLabel">
+                    <input type="checkbox" name="awareness" value="Other" />
+                    Other
+                  </label>
+                </div>
+                <div>
+                  <button
+                    className="button-dark"
+                    type="submit"
+                    disabled={isSubmitting}
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <div className="supportContainer">
+            <Support />
+          </div>
+        </FormWrapper>
+      )}
+    </Formik>
   )
 }
 
@@ -102,7 +192,7 @@ const FormWrapper = styled.div`
     }
   }
   .button-dark {
-    font-size: 1rem;
+    font-size: 0.7rem;
     color: var(--mainWhite);
     background-color: var(--primaryColor);
     padding: 0.8rem 1.2rem;
@@ -119,7 +209,7 @@ const FormWrapper = styled.div`
   }
   fieldset {
     padding: 0em 1em 1em 1em;
-    width: 50vw;
+    width: 70vw;
     margin: 1rem auto;
   }
   form {
@@ -131,6 +221,7 @@ const FormWrapper = styled.div`
   }
   .halflabel {
     width: 49%;
+    margin-bottom: 0rem;
   }
   .fulllabel {
     width: 100%;
@@ -207,6 +298,22 @@ const FormWrapper = styled.div`
 
   input[type="image"] {
     vertical-align: bottom;
+  }
+  @media (max-width: 973px) {
+    fieldset {
+      width: 80vw;
+    }
+  }
+  @media (max-width: 666px) {
+    .halfLabelContainer {
+      flex-direction: column;
+    }
+    .halflabel {
+      width: 100%;
+    }
+    fieldset {
+      width: 80vw;
+    }
   }
 `
 

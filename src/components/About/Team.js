@@ -54,6 +54,16 @@ const TeamWrapper = styled.div`
     flex-direction: row;
     justify-content: flex-start;
   }
+  @media (max-width: 973px) {
+    .topRow,
+    .bottomRow {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }
+  @media (max-width: 666px) {
+  }
 `
 
 export default Team

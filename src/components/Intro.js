@@ -22,10 +22,10 @@ const IntroWrapper = styled.div`
     font-weight: bold;
   }
   .description {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-weight: light;
     color: var(--mainGray);
-    line-height: 1.2rem;
+    line-height: 1.5rem;
   }
 `
 

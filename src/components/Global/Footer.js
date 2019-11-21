@@ -9,8 +9,8 @@ const Footer = () => {
     <FooterWrapper>
       <div className="footerContainer">
         <div className="logo">
-          <AniLink fade to="/" className="navbar-brand">
-            <img src={logo} alt="logo" width="120px" />
+          <AniLink fade to="/" className="navbar-brand footer-logo">
+            <img src={logo} alt="logo" width="100px" />
           </AniLink>
         </div>
         <div className="footer">
@@ -109,6 +109,9 @@ const FooterWrapper = styled.div`
     color: var(--mainGray);
     font-size: 0.7rem;
     padding: 1rem 5rem;
+  }
+  .footer-logo {
+    margin-right: 0rem;
   }
   .copyright p {
     margin: 0rem;
